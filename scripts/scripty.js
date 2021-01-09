@@ -114,9 +114,11 @@ class beverage {
         pumps = 5;
         break;
       case 'Large Hot Redbull':
+      case 'Small Frozen Redbull':
         pumps = 6;
         break;
       case 'Large Iced Redbull':
+      case 'Large Frozen Redbull':
         pumps = 8;
         break;
     }
@@ -380,4 +382,5 @@ answerBtn.addEventListener('click', () => {
   toggleDisplay('#shotsNum');
   toggleDisplay('#pumpsNum');
   toggleDisplay('#scoopsNum');
+  toggleDisplay('#redbullsNum');
 });
