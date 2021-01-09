@@ -165,7 +165,7 @@ class beverage {
     let redbulls;
     switch (name) {
       case 'Small frozen Redbull':
-        redbulls = '3/4';
+        redbulls = .75;
       case 'Small Iced Redbull':
       case 'Small Hot Redbull':
         redbulls = 1;
