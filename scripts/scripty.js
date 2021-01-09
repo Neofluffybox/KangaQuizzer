@@ -175,6 +175,7 @@ class beverage {
         redbulls = 2;
         break;
     }
+    return redbullsNum.innerHTML = redbulls;
   }
   display() {
     resetDisplay('#shots');
