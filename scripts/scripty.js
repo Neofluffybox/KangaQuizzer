@@ -301,9 +301,12 @@ function resetContent() {
   pumpsCheckerBox.style.color = 'black';
   scoopsCheckerBox.value = '';
   scoopsCheckerBox.style.color = 'black';
+  redbullsCheckerBox.value = '';
+  redbullsCheckerBox.style.color = 'black';
   checkedShots.innerHTML = '';
   checkedPumps.innerHTML = '';
   checkedScoops.innerHTML = '';
+  checkedRedbulls.innerHTML = '';
 }
 
 //menu
