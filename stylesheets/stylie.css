@@ -49,44 +49,198 @@ table {
 
 /* my css code below. reset above.*/
 
+*{
+    box-sizing: border-box;
+}
+
 body {
-    border: 5px solid black;
     display: grid;
+    grid-template-columns: 600px;
+    background-color: #ffee77;
     justify-content: center;
-    grid-template-columns: 75px 75px 100px 100px 75px 75px;
-    grid-template-rows: 220px auto 100px;
-    grid-template-areas: 
-        "header header header header header header"
-        "left left middle middle right right"
-        "footer footer footer footer footer footer";
-    background-color: #964;
+}
+
+hr {
+    border: 1px solid black;
 }
 
 header {
-    border: 5px solid green;
-    grid-area: header;
+    border: 4px solid #111;
+    border-radius: 15px;
+    background: linear-gradient(#000, #fce205, #000);
+    color: #000;
+    width: 600px;
+    height: 46px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
-
-nav {
-    border: 5px solid blue;
-    grid-area: left;
-}
-
-section {
-    border: 5px solid red;
-    grid-area: middle;
-}
-
-    article {
-        border: 5px solid violet;
+    header h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 5px;
     }
 
-aside{
-    border: 5px solid orange;
-    grid-area: right;
+nav {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: center;
+    width: 100%;
 }
 
+.set {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    background: linear-gradient(#111, #fce205, #111);
+    text-align: center;
+}
+    .title {
+        font-size: 16px;
+        margin: 3px;
+        font-weight: 550;
+    }
+    .desc {
+        margin: 3px;
+        margin-bottom: 10px;
+        margin-top: 1px;
+    }
+    .gallery {
+        display: flex;
+        flex-flow: row;
+        overflow: scroll;
+        align-items: baseline;
+        justify-content: flex-start;
+    }
+    #drinkBlock {
+        justify-content: space-evenly;
+    }
+    .checker {
+        display: flex;
+        width: 24px;
+        background-color: #aaaacc;
+        border-radius: 5px;
+    }
+    .gallery::-webkit-scrollbar {
+        width: 0px;
+    }
+    .galleryItem {
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+        align-items: center;
+        text-align: center;
+    }
+    .goBtn {
+        border-radius: 8px;
+        border: 2px solid #222;
+        width: 70px;
+        height: 25px;
+        font-size: 13px;
+        font-weight: 550;
+        background-color: #e0dd0c;
+        margin-top: 12px; 
+    }
+    #drinkTitle {
+        display: none;
+        justify-content: center;
+    }
+    #drinkDisplay {
+        display: none;
+        flex-direction: column;
+    }
+    #drink {
+        display: flex;
+        justify-content: center;
+    }
+    #shots {
+        display: none;
+    }
+    #shotsNum {
+        display: none;
+    }
+    #pumps {
+        display: none;
+    }
+    #pumpsNum {
+        display: none;
+    }
+    #scoops {
+        display: none;
+    }
+    #scoopsNum {
+        display: none;
+    }
+    #redbulls {
+        display: none;
+    }
+    #redbullsNum {
+        display: none;
+    }
+
 footer{
-    border: 5px solid brown;
-    grid-area: footer;
+    width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+    body {
+        grid-template-columns: 280px;
+    }
+    .set {
+        width: 270px;
+    }
+    header{
+        width: 270px;
+    }
+    .goBtn {
+        font-size: 12;
+    }
+    .buttons {
+        padding: 6px;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 401px) {
+    body {
+        grid-template-columns: 380px;
+    }
+    .set {
+        width: 350px;
+    }
+    .goBtn {
+        font-size: 12px;
+    }
+    header{
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 601px) {
+    body {
+        grid-template-columns: 525px;
+    }
+    .set {
+        width: 500px;
+    }
+    header{
+        width: 500px;
+    }
+}
+@media only screen and (min-width: 1001px) {
+    body {
+        grid-template-columns: 800px;
+    }
+    .set {
+        width: 680px;
+    }
+    header{
+        width: 680px;
+    }
+    .buttons {
+        padding: 10px;
+    }
 }

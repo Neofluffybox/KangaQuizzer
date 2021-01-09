@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>skeleton</title>
+    <title>KangaQuizzer</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">"
@@ -12,10 +12,65 @@
 </head>
 
 <body>
-    <nav></nav>
-    <section></section>
-    <article></article>
-    <aside></aside>
+    <header>
+        <h1>KangaQuizzer</h1>
+    </header>
+
+    <nav>
+        <button type="button" class="goBtn" id="drink">Quiz!</button>
+    </nav>
+    <section>
+        <div class='set'>
+            <span class='title' id='drinkTitle'>
+                Drink Title
+            </span>
+        </div>
+        <div class='set' id='drinkDisplay'>
+            <div class='gallery' id='drinkBlock'>
+                <div class='galleryItem' id='shots'>
+                    <span class='title'>
+                        Shots
+                        <hr>
+                    </span>
+                    <span class='desc' id='shotsNum'></span>
+                    <input type='text' class='checker' id='shotsCheckerBox'>
+                    <span class='desc' id='checkedShots'></span>
+                </div>
+                <div class='galleryItem' id='redbulls'>
+                    <span class='title'>
+                        Redbull/s
+                        <hr>
+                    </span>
+                    <span class='desc' id='redbullsNum'></span>
+                    <input type='text' class='checker' id='redbullsCheckerBox'>
+                    <span class='desc' id='checkedRedbulls'></span>
+                </div>
+                <div class='galleryItem' id='pumps'>
+                    <span class='title'>
+                        Pumps
+                        <hr>
+                    </span>
+                    <span class='desc' id='pumpsNum'></span>
+                    <input type='text' class='checker' id='pumpsCheckerBox'>
+                    <span class='desc' id='checkedPumps'></span>
+                </div>
+                <div class='galleryItem' id='scoops'>
+                    <span class='title'>
+                        Scoops
+                        <hr>
+                    </span>
+                    <span class='desc' id='scoopsNum'></span>
+                    <input type='text' class='checker' id='scoopsCheckerBox'>
+                    <span class='desc' id='checkedScoops'></span>
+                </div>
+            </div>
+            <div>
+                <button id='newDrink' class='goBtn' type='button'>New</button>
+                <button id='checkerBtn' class='goBtn' type='button'>Check</button>
+                <button id='answer' class='goBtn' type='button'>Answer</button>
+            </div>
+        </div>
+    </section>
     <footer></footer>
     <script src="/scripts/scripty.js"></script>
 </body>
