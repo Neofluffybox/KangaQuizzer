@@ -164,8 +164,8 @@ class beverage {
     let name = `${this.size} ${this.type} ${this.name}`;
     let redbulls;
     switch (name) {
-      case 'Small frozen Redbull':
-        redbulls = .75;
+      case 'Small Frozen Redbull':
+        redbulls = "3/4"
       case 'Small Iced Redbull':
       case 'Small Hot Redbull':
         redbulls = 1;
