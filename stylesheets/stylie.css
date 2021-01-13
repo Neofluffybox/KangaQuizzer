@@ -121,7 +121,7 @@ nav {
     }
     .checker {
         display: flex;
-        width: 24px;
+        width: 26px;
         background-color: #aaaacc;
         border-radius: 5px;
     }
@@ -142,7 +142,7 @@ nav {
     .goBtn {
         border-radius: 8px;
         border: 2px solid #222;
-        width: 70px;
+        width: 78px;
         height: 25px;
         font-size: 13px;
         font-weight: 550;
@@ -268,8 +268,5 @@ footer{
     }
     header{
         width: 680px;
-    }
-    .buttons {
-        padding: 10px;
     }
 }
