@@ -7,280 +7,180 @@ create view and quiz on drinks for my job
 //selectors
 const drinkBtn = document.querySelector('#drink');
 const drinkTitle = document.querySelector('#drinkTitle');
+const drinkType = document.querySelector('#drinkType');
 const shots = document.querySelector('#shots');
-const pumps = document.querySelector('#pumps');
-const scoops = document.querySelector('#scoops');
-const redbulls = document.querySelector('#redbulls');
 const shotsNum = document.querySelector('#shotsNum');
+const shotsCheckerBox = document.querySelector('#shotsCheckerBox');
+const pumps = document.querySelector('#pumps');
 const pumpsNum = document.querySelector('#pumpsNum');
+const pumpsCheckerBox = document.querySelector('#pumpsCheckerBox');
+const pumps2 = document.querySelector('#pumps2');
+const pumps2Num = document.querySelector('#pumps2Num');
+const pumps2CheckerBox = document.querySelector('#pumps2CheckerBox');
+const scoops = document.querySelector('#scoops');
 const scoopsNum = document.querySelector('#scoopsNum');
+const scoopsCheckerBox = document.querySelector('#scoopsCheckerBox');
+const redbulls = document.querySelector('#redbulls');
 const redbullsNum = document.querySelector('#redbullsNum');
+const redbullsCheckerBox = document.querySelector('#redbullsCheckerBox');
+const cupSize = document.querySelector('#cupSize');
+const cupSizeNum = document.querySelector('#cupSizeNum');
+const cupSizeCheckerBox = document.querySelector('#cupSizeCheckerBox');
+const cOz = document.querySelector('#cOz');
+const cOzNum = document.querySelector('#cOzNum');
+const cOzCheckerBox = document.querySelector('#cOzCheckerBox');
+const wOz = document.querySelector('#wOz');
+const wOzNum = document.querySelector('#wOzNum');
+const wOzCheckerBox = document.querySelector('#wOzCheckerBox');
 const newDrinkBtn = document.querySelector('#newDrink');
 const checkerBtn = document.querySelector('#checkerBtn');
-const checkedShots = document.querySelector('#checkedShots');
-const checkedPumps = document.querySelector('#checkedPumps');
-const checkedScoops = document.querySelector('#checkedScoops');
-const checkedRedbulls = document.querySelector('#checkedRedbulls');
 const answerBtn = document.querySelector('#answer');
 
 //classes and functions
 class beverage {
-  constructor(name, type, size) {
+  constructor(name, type, size, temp, shots, pumps, pumps2, scoops, redbulls, cupSize, cOz, wOz) {
     this._name = name;
     this._type = type;
     this._size = size;
+    this._temp = temp;
+    this._shots = shots;
+    this._pumps = pumps;
+    this._pumps2 = pumps2;
+    this._scoops = scoops;
+    this._redbulls = redbulls;
+    this._cupSize = cupSize;
+    this._cOz = cOz;
+    this._wOz = wOz;
   }
-  get name() { return this._name; }
-  get type() { return this._type; }
-  get size() { return this._size; }
-  set name(x) { return this._name = x; }
-  set type(x) { return this._type = x; }
-  set size(x) { return this._size = x; }
-  shotDeterminer() {
-    toggleDisplay('#shots');
-    let name = `${this.size} ${this.type} ${this.name}`;
-    let shots;
-    switch (name) {
-      case 'Small Hot Latte':
-      case 'Small Hot Cappuccino':
-      case 'Small Hot Mocha':
-      case 'Small Iced Latte':
-      case 'Small Iced Mocha':
-        shots = 2;
-        break;
-      case 'Medium Hot Latte':
-      case 'Medium Hot Cappuccino':
-      case 'Medium Hot Mocha':
-      case 'Medium Iced Latte':
-      case 'Medium Iced Mocha':
-        shots = 2;
-        break;
-      case 'Large Iced Latte':
-      case 'Large Iced Mocha':
-        shots = 3;
-      case 'Large Hot Latte':
-      case 'Large Hot Cappuccino':
-      case 'Large Hot Mocha':
-        shots = 4;
-        break;
-      case 'Small Frozen Latte':
-      case 'Small Frozen Mocha':
-      case ' Hot Avalanch':
-        shots = 6;
-        break;
-      case 'Medium Frozen Latte':
-      case 'Medium Frozen Mocha':
-        shots = 8;
-        break;
-      case 'Large Frozen Latte':
-      case 'Large Frozen Mocha':
-        shots = 10;
-        break;
-      case ' Iced Avalanch':
-      case ' Frozen Avalanch':
-        shots = 14;
-        break;
-    }
-    return shotsNum.innerHTML = shots;
+}
+
+class drinkList {
+  constructor(list) {
+    this.list = [];
   }
-  pumpDeterminer = () => {
-    toggleDisplay('#pumps');
-    let name = `${this.size} ${this.type} ${this.name}`;
-    let pumps;
-    switch (name) {
-      case 'Small Hot Latte':
-      case 'Small Hot Cappuccino':
-      case 'Small Iced Latte':
-        pumps = 2;
-        break;
-      case 'Medium Hot Latte':
-      case 'Medium Hot Cappuccino':
-      case 'Medium Iced Latte':
-      case 'Small Frozen Latte':
-      case ' Hot Avalanch':
-      case ' Iced Avalanch':
-      case ' Frozen Avalanch':
-      case 'Small Hot Redbull':
-        pumps = 3;
-        break;
-      case 'Large Hot Latte':
-      case 'Large Hot Cappuccino':
-      case 'Large Iced Latte':
-      case 'Medium Frozen Latte':
-      case 'Small Iced Redbull':
-        pumps = 4;
-        break;
-      case 'Large Frozen Latte':
-        pumps = 5;
-        break;
-      case 'Large Hot Redbull':
-      case 'Small Frozen Redbull':
-        pumps = 6;
-        break;
-      case 'Large Iced Redbull':
-      case 'Large Frozen Redbull':
-        pumps = 8;
-        break;
-    }
-    return pumpsNum.innerHTML = pumps;
+  add(drink) {
+    return this.list.push(drink);
   }
-  scoopDeterminer = () => {
-    toggleDisplay('#scoops');
-    let name = `${this.size} ${this.type} ${this.name}`;
-    let scoops;
-    switch (name) {
-      case 'Small Hot Mocha':
-      case 'Small Iced Mocha':
-        scoops = 2;
-        break;
-      case 'Medium Hot Mocha':
-      case 'Medium Iced Mocha':
-      case 'Small Frozen Mocha':
-        scoops = 2.5;
-        break;
-      case 'Large Hot Mocha':
-      case 'Large Iced Mocha':
-      case 'Medium Frozen Mocha':
-      case 'Small Hot Chai':
-      case 'Small Hot Matcha':
-        scoops = 3;
-        break;
-      case 'Large Frozen Mocha':
-        scoops = 3.5;
-        break;
-      case 'Medium Hot Chai':
-      case 'Medium Hot Matcha':
-        scoops = 4;
-        break;
-      case 'Large Hot Chai':
-      case 'Large Hot Matcha':
-        scoops = 5;
-        break;
-    }
-    return scoopsNum.innerHTML = scoops;
-  }
-  redbullDeterminer = () => {
-    toggleDisplay('#redbulls');
-    let name = `${this.size} ${this.type} ${this.name}`;
-    let redbulls;
-    switch (name) {
-      case 'Small Frozen Redbull':
-        redbulls = "3/4"
-      case 'Small Iced Redbull':
-      case 'Small Hot Redbull':
-        redbulls = 1;
-        break;
-      case 'Large Iced Redbull':
-      case 'Large Hot Redbull':
-        redbulls = 2;
-        break;
-    }
-    return redbullsNum.innerHTML = redbulls;
-  }
-  display() {
-    resetDisplay('#shots');
-    resetDisplay('#pumps');
-    resetDisplay('#scoops');
-    resetDisplay('#redbulls');
-    let name = `${this.size} ${this.type} ${this.name}`;
-    switch (name) {
-      case "Small Hot Latte":
-      case "Medium Hot Latte":
-      case "Large Hot Latte":
-      case "Small Iced Latte":
-      case "Medium Iced Latte":
-      case "Large Iced Latte":
-      case "Small Frozen Latte":
-      case "Medium Frozen Latte":
-      case "Large Frozen Latte":
-      case "Small Hot Cappuccino":
-      case "Medium Hot Cappuccino":
-      case "Large Hot Cappuccino":
-      case " Hot Avalanch":
-      case " Iced Avalanch":
-      case " Frozen Avalanch":
-        this.shotDeterminer();
-        this.pumpDeterminer();
-        break;
-      case "Small Hot Mocha":
-      case "Medium Hot Mocha":
-      case "Large Hot Mocha":
-      case "Small Iced Mocha":
-      case "Medium Iced Mocha":
-      case "Large Iced Mocha":
-      case "Small Frozen Mocha":
-      case "Medium Frozen Mocha":
-      case "Large Frozen Mocha":
-        this.shotDeterminer();
-        this.scoopDeterminer();
-        break;
-      case 'Small Hot Chai':
-      case 'Small Hot Matcha':
-      case 'Medium Hot Chai':
-      case 'Medium Hot Matcha':
-      case 'Large Hot Chai':
-      case 'Large Hot Matcha':
-        this.scoopDeterminer();
-        break;
-      case 'Small Hot Redbull':
-      case 'Large Hot Redbull':
-      case 'Small Iced Redbull':
-      case 'Large Iced Redbull':
-      case 'Small Frozen Redbull':
-      case 'Large Frozen Redbull':
-        this.redbullDeterminer();
-        this.pumpDeterminer();
-        break;
-    }
-    return drinkTitle.innerHTML = name;
+  display(name) {
+    if (name == "random") {
+      let randomDrink = Math.floor(Math.random() * this.list.length);
+      let theDrink = this.list[randomDrink];
+      drinkTitle.innerHTML = `${theDrink._size} ${theDrink._temp} ${theDrink._name}`;
+      drinkType.innerHTML = theDrink._type;
+      if (theDrink._shots != '') {
+        shotsNum.innerHTML = theDrink._shots;
+        toggleDisplay('#shots');
+      };
+      if (theDrink._pumps != '') {
+        pumpsNum.innerHTML = theDrink._pumps;
+        toggleDisplay('#pumps');
+      };
+      if (theDrink._pumps2 != '') {
+        pumps2Num.innerHTML = theDrink._pumps2;
+        toggleDisplay('#pumps2');
+      };
+      if (theDrink._scoops != '') {
+        scoopsNum.innerHTML = theDrink._scoops;
+        toggleDisplay('#scoops');
+      };
+      if (theDrink._redbulls != '') {
+        redbullsNum.innerHTML = theDrink._redbulls;
+        toggleDisplay('#redbulls');
+      };
+      if (theDrink._cupSize != '') {
+        cupSizeNum.innerHTML = theDrink._cupSize;
+        toggleDisplay('#cupSize');
+      };
+      if (theDrink._cOz != '') {
+        cOzNum.innerHTML = theDrink._cOz;
+        toggleDisplay('#cOz');
+      };
+      if (theDrink._wOz != '') {
+        wOzNum.innerHTML = theDrink._wOz;
+        toggleDisplay('#wOz');
+      };
+    } /*else {
+      let theDrink = this.list._name[name];
+      drinkTitle.innerHTML = `${theDrink._size} ${theDrink._temp} ${theDrink._name}`;
+      drinkType.innerHTML = theDrink._type;
+      if (theDrink._shots != '') {
+        shotsNum.innerHTML = theDrink._shots;
+      };
+      if (theDrink._pumps != '') {
+        pumpsNum.innerHTML = theDrink._pumps;
+      };
+      if (theDrink._pumps2 != '') {
+        pumps2Num.innerHTML = theDrink._pumps2;
+      };
+      if (theDrink._scoops != '') {
+        scoopsNum.innerHTML = theDrink._scoops;
+      };
+      if (theDrink._redbulls != '') {
+        redbullsNum.innerHTML = theDrink._redbulls;
+      };
+      if (theDrink._cupSize != '') {
+        cupSizeNum.innerHTML = theDrink._cupSize;
+      };
+      if (theDrink._cOz != '') {
+        cOz.innerHTML = theDrink._cOz;
+      };
+      if (theDrink._wOz != '') {
+        wOz.innerHTML = theDrink._wOz;
+      };
+    }*/
   }
   checker() {
     if (shotsCheckerBox.value == shotsNum.innerHTML) {
-      shotsCheckerBox.style.color = 'green';
-      checkedShots.innerHTML = 'correct!';
+      shotsCheckerBox.style.backgroundColor = '#33ee33';
     } else {
-      shotsCheckerBox.style.color = 'red';
-      checkedShots.innerHTML = 'incorrect';
+      shotsCheckerBox.style.backgroundColor = '#ee3333';
     };
     if (pumpsCheckerBox.value == pumpsNum.innerHTML) {
-      pumpsCheckerBox.style.color = 'green';
-      checkedPumps.innerHTML = 'correct!';
+      pumpsCheckerBox.style.backgroundColor = '#33ee33';
     } else {
-      pumpsCheckerBox.style.color = 'red';
-      checkedPumps.innerHTML = 'incorrect';
+      pumpsCheckerBox.style.backgroundColor = '#ee3333';
+    };
+    if (pumps2CheckerBox.value == pumps2Num.innerHTML) {
+      pumps2CheckerBox.style.backgroundColor = '#33ee33';
+    } else {
+      pumps2CheckerBox.style.backgroundColor = '#ee3333';
     };
     if (scoopsCheckerBox.value == scoopsNum.innerHTML) {
-      scoopsCheckerBox.style.color = 'green';
-      checkedScoops.innerHTML = 'correct!';
+      scoopsCheckerBox.style.backgroundColor = '#33ee33';
     } else {
-      scoopsCheckerBox.style.color = 'red';
-      checkedScoops.innerHTML = 'incorrect';
+      scoopsCheckerBox.style.backgroundColor = '#ee3333';
     };
     if (redbullsCheckerBox.value == redbullsNum.innerHTML) {
-      redbullsCheckerBox.style.color = 'green';
-      checkedRedbulls.innerHTML = 'correct!';
+      redbullsCheckerBox.style.backgroundColor = '#33ee33';
     } else {
-      redbullsCheckerBox.style.color = 'red';
-      checkedRedbulls.innerHTML = 'incorrect';
+      redbullsCheckerBox.style.backgroundColor = '#ee3333';
+    };
+    if (cupSizeCheckerBox.value == cupSizeNum.innerHTML) {
+      cupSizeCheckerBox.style.backgroundColor = '#33ee33';
+    } else {
+      cupSizeCheckerBox.style.backgroundColor = '#ee3333';
+    };
+    if (cOzCheckerBox.value == cOzNum.innerHTML) {
+      cOzCheckerBox.style.backgroundColor = '#33ee33';
+    } else {
+      cOzCheckerBox.style.backgroundColor = '#ee3333';
+    };
+    if (wOzCheckerBox.value == wOzNum.innerHTML) {
+      wOzCheckerBox.style.backgroundColor = '#33ee33';
+    } else {
+      wOzCheckerBox.style.backgroundColor = '#ee3333';
     };
   }
-}
-
-let randomSize = () => {
-  let sizes = ['Small', 'Medium', 'Large'];
-  let num = Math.floor(Math.random() * sizes.length);
-  return sizes[num];
-}
-
-let randomType = () => {
-  let types = ['Hot', 'Iced', 'Frozen'];
-  let num = Math.floor(Math.random() * types.length);
-  return types[num];
-}
-
-let randomDrink = () => {
-  let num = Math.floor(Math.random() * drinkList.length);
-  return drinkList[num];
+  answer() {
+    shotsCheckerBox.placeholder = ` ${shotsNum.innerHTML}`;
+    pumpsCheckerBox.placeholder = ` ${pumpsNum.innerHTML}`;
+    pumps2CheckerBox.placeholder = ` ${pumps2Num.innerHTML}`;
+    scoopsCheckerBox.placeholder = ` ${scoopsNum.innerHTML}`;
+    redbullsCheckerBox.placeholder = ` ${redbullsNum.innerHTML}`;
+    cupSizeCheckerBox.placeholder = `${cupSizeNum.innerHTML}`;
+    cOzCheckerBox.placeholder = ` ${cOzNum.innerHTML}`;
+    wOzCheckerBox.placeholder = ` ${wOzNum.innerHTML}`;
+  }
 }
 
 function toggleDisplay(x) {
@@ -299,89 +199,82 @@ function resetDisplay(x) {
 
 function resetContent() {
   shotsCheckerBox.value = '';
-  shotsCheckerBox.style.color = 'black';
+  shotsCheckerBox.style.backgroundColor = '#aaaacc';
+  shotsCheckerBox.placeholder = '';
+  shots.style.display = 'none';
   pumpsCheckerBox.value = '';
-  pumpsCheckerBox.style.color = 'black';
+  pumpsCheckerBox.style.backgroundColor = '#aaaacc';
+  pumpsCheckerBox.placeholder = '';
+  pumps.style.display = 'none';
+  pumps2CheckerBox.value = '';
+  pumps2CheckerBox.style.backgroundColor = '#aaaacc';
+  pumps2CheckerBox.placeholder = '';
+  pumps2.style.display = 'none';
   scoopsCheckerBox.value = '';
-  scoopsCheckerBox.style.color = 'black';
+  scoopsCheckerBox.style.backgroundColor = '#aaaacc';
+  scoopsCheckerBox.placeholder = '';
+  scoops.style.display = 'none';
   redbullsCheckerBox.value = '';
-  redbullsCheckerBox.style.color = 'black';
-  checkedShots.innerHTML = '';
-  checkedPumps.innerHTML = '';
-  checkedScoops.innerHTML = '';
-  checkedRedbulls.innerHTML = '';
+  redbullsCheckerBox.style.backgroundColor = '#aaaacc';
+  redbullsCheckerBox.placeholder = '';
+  redbulls.style.display = 'none';
+  cupSizeCheckerBox.value = '';
+  cupSizeCheckerBox.style.backgroundColor = '#aaaacc';
+  cupSizeCheckerBox.placeholder = '';
+  cupSize.style.display = 'none';
+  cOzCheckerBox.value = '';
+  cOzCheckerBox.style.backgroundColor = '#aaaacc';
+  cOzCheckerBox.placeholder = '';
+  cOz.style.display = 'none';
+  wOzCheckerBox.value = '';
+  wOzCheckerBox.style.backgroundColor = '#aaaacc';
+  wOzCheckerBox.placeholder = '';
+  wOz.style.display = 'none';
 }
 
 //menu
-let drinkList = [];
+let list = new drinkList();
+//Lattes
+let sHLatte = new beverage("Latte", "Latte", "Small", "Hot", 2, "", "", "", "", 12, "", "");
+list.add(sHLatte);
+let mHLatte = new beverage("Latte", "Latte", "Medium", "Hot", 2, "", "", "", "", 16, "", "");
+list.add(mHLatte);
+let lHLatte = new beverage("Latte", "Latte", "Large", "Hot", 4, "", "", "", "", 20, "", "");
+list.add(lHLatte);
+let xLHLatte = new beverage("Latte", "Latte", "Extra Large", "Hot", 4, "", "", "", "", 24, "", "");
+list.add(xLHLatte);
+let sHSLatte = new beverage("Latte", "Single-Flavored Latte", "Small", "Hot", 2, 2, "", "","",12,"","");
+list.add(sHSLatte);
+let mHSLatte = new beverage("Latte", "Single-Flavored Latte", "Medium", "Hot", 2, 3, "", "","",16,"","");
+list.add(mHSLatte);
+let lHSLatte = new beverage("Latte", "Single-Flavored Latte", "Large", "Hot", 4, 4, "", "","",20,"","");
+list.add(lHSLatte);
+let xLHSLatte = new beverage("Latte", "Single-Flavored Latte", "Small", "Hot", 4, 5, "", "","",24,"","");
+list.add(xLHSLatte);
 
-let hotLatte = new beverage('Latte', 'Hot', randomSize())
-drinkList.push(hotLatte);
-let icedLatte = new beverage('Latte', 'Iced', randomSize())
-drinkList.push(icedLatte);
-let frozenLatte = new beverage('Latte', 'Frozen', randomSize())
-drinkList.push(frozenLatte);
 
-let Cappuccino = new beverage('Cappuccino', 'Hot', randomSize())
-drinkList.push(Cappuccino);
-
-let hotMocha = new beverage('Mocha', 'Hot', randomSize())
-drinkList.push(hotMocha);
-let icedMocha = new beverage('Mocha', 'Iced', randomSize())
-drinkList.push(icedMocha);
-let frozenMocha = new beverage('Mocha', 'Frozen', randomSize())
-drinkList.push(frozenMocha);
-
-let hotChai = new beverage('Chai', 'Hot', randomSize())
-drinkList.push(hotChai);
-let hotMatcha = new beverage('Matcha', 'Hot', randomSize())
-drinkList.push(hotMatcha);
-
-let hotAvalanch = new beverage('Avalanch', 'Hot', '')
-drinkList.push(hotAvalanch);
-let icedAvalanch = new beverage('Avalanch', 'Iced', '')
-drinkList.push(icedAvalanch);
-let frozenAvalanch = new beverage('Avalanch', 'Frozen', '')
-drinkList.push(frozenAvalanch);
-
-let hotRedbullS = new beverage('Redbull', 'Hot', 'Small')
-drinkList.push(hotRedbullS);
-let hotRedbullL = new beverage('Redbull', 'Hot', 'Large')
-drinkList.push(hotRedbullL);
-let icedRedbullS = new beverage('Redbull', 'Iced', 'Small')
-drinkList.push(icedRedbullS);
-let icedRedbullL = new beverage('Redbull', 'Iced', 'Large')
-drinkList.push(icedRedbullL);
-let frozenRedbullS = new beverage('Redbull', 'Frozen', 'Small')
-drinkList.push(frozenRedbullS);
-let frozenRedbullL = new beverage('Redbull', 'Frozen', 'Large')
-drinkList.push(frozenRedbullL);
 
 
 
 //buttons
 drinkBtn.addEventListener('click', () => {
   toggleDisplay('#drinkDisplay');
-  toggleDisplay('#drinkTitle');
-  randomDrink().display();
   resetContent();
+  list.display("random");
 });
 drinkBtn.addEventListener('dblclick', () => {
   toggleDisplay('#drink');
 });
 
 newDrinkBtn.addEventListener('click', () => {
-  randomDrink().display();
   resetContent();
+  list.display("random");
 });
 
 checkerBtn.addEventListener('click', () => {
-  randomDrink().checker();
+  list.checker();
 });
 
 answerBtn.addEventListener('click', () => {
-  toggleDisplay('#shotsNum');
-  toggleDisplay('#pumpsNum');
-  toggleDisplay('#scoopsNum');
-  toggleDisplay('#redbullsNum');
+  list.answer();
 });
