@@ -234,6 +234,7 @@ function resetContent() {
 
 //menu
 let list = new drinkList();
+
 //Lattes
 let sHLatte = new beverage("Latte", "Latte", "Small", "Hot", 2, "", "", "", "", 12, "", "");
 list.add(sHLatte);
@@ -243,18 +244,106 @@ let lHLatte = new beverage("Latte", "Latte", "Large", "Hot", 4, "", "", "", "", 
 list.add(lHLatte);
 let xLHLatte = new beverage("Latte", "Latte", "Extra Large", "Hot", 4, "", "", "", "", 24, "", "");
 list.add(xLHLatte);
+let sILatte = new beverage("Latte", "Latte", "Small", "Iced", 2, "", "", "", "", 16, "", 10);
+list.add(sILatte);
+let mILatte = new beverage("Latte", "Latte", "Medium", "Iced", 2, "", "", "", "", 20, "", 12);
+list.add(mILatte);
+let lILatte = new beverage("Latte", "Latte", "Large", "Iced", 3, "", "", "", "", 24, "", 16);
+list.add(lILatte);
+let sFLatte = new beverage("Latte", "Latte", "Small", "Frozen", 6, "", "", "", "", 16, "", "");
+list.add(sFLatte);
+let mFLatte = new beverage("Latte", "Latte", "Medium", "Frozen", 8, "", "", "", "", 20, "", "");
+list.add(mFLatte);
+let lFLatte = new beverage("Latte", "Latte", "Large", "Frozen", 10, "", "", "", "", 24, "", "");
+list.add(lFLatte);
+
+//Single-Flavored Lattes
 let sHSLatte = new beverage("Latte", "Single-Flavored Latte", "Small", "Hot", 2, 2, "", "","",12,"","");
 list.add(sHSLatte);
 let mHSLatte = new beverage("Latte", "Single-Flavored Latte", "Medium", "Hot", 2, 3, "", "","",16,"","");
 list.add(mHSLatte);
 let lHSLatte = new beverage("Latte", "Single-Flavored Latte", "Large", "Hot", 4, 4, "", "","",20,"","");
 list.add(lHSLatte);
-let xLHSLatte = new beverage("Latte", "Single-Flavored Latte", "Small", "Hot", 4, 5, "", "","",24,"","");
+let xLHSLatte = new beverage("Latte", "Single-Flavored Latte", "Extra Large", "Hot", 4, 5, "", "","",24,"","");
 list.add(xLHSLatte);
+let sISLatte = new beverage("Latte", "Single-Flavored Latte", "Small", "Iced", 2, 2, "", "", "", 16, "", 10);
+list.add(sISLatte);
+let mISLatte = new beverage("Latte", "Single-Flavored Latte", "Medium", "Iced", 2, 3, "", "", "", 20, "", 12);
+list.add(mISLatte);
+let lISLatte = new beverage("Latte", "Single-Flavored Latte", "Large", "Iced", 3, 4, "", "", "", 24, "", 16);
+list.add(lISLatte);
+let sFSLatte = new beverage("Latte", "Single-Flavored Latte", "Small", "Frozen", 6, 4, "", "", "", 16, "", "");
+list.add(sFSLatte);
+let mFSLatte = new beverage("Latte", "Single-Flavored Latte", "Medium", "Frozen", 8, 5, "", "", "", 20, "", "");
+list.add(mFSLatte);
+let lFSLatte = new beverage("Latte", "Single-Flavored Latte", "Large", "Frozen", 10, 6, "", "", "", 24, "", "");
+list.add(lFSLatte);
 
+//Double-Flavor Lattes
+let sHDLatte = new beverage("Latte", "Double-Flavored Latte", "Small", "Hot", 1.5, 1.5, "", "","",12,"","");
+list.add(sHDLatte);
+let mHDLatte = new beverage("Latte", "Double-Flavored Latte", "Medium", "Hot", 2, 2, 2, "","",16,"","");
+list.add(mHDLatte);
+let lHDLatte = new beverage("Latte", "Double-Flavored Latte", "Large", "Hot", 4, 3, 3, "","",20,"","");
+list.add(lHDLatte);
+let xLHDLatte = new beverage("Latte", "Double-Flavored Latte", "Extra Large", "Hot", 4, 3.5, 3.5, "","",24,"","");
+list.add(xLHDLatte);
+let sIDLatte = new beverage("Latte", "Double-Flavored Latte", "Small", "Iced", 2, 1.5, 1.5, "", "", 16, "", 10);
+list.add(sIDLatte);
+let mIDLatte = new beverage("Latte", "Double-Flavored Latte", "Medium", "Iced", 2, 2, 2, "", "", 20, "", 12);
+list.add(mIDLatte);
+let lIDLatte = new beverage("Latte", "Double-Flavored Latte", "Large", "Iced", 3, 3, 3, "", "", 24, "", 16);
+list.add(lIDLatte);
+let sFDLatte = new beverage("Latte", "Double-Flavored Latte", "Small", "Frozen", 6, 4, 2, 2, "", 16, "", "");
+list.add(sFDLatte);
+let mFDLatte = new beverage("Latte", "Double-Flavored Latte", "Medium", "Frozen", 8, 5, 3, 3, "", 20, "", "");
+list.add(mFDLatte);
+let lFDLatte = new beverage("Latte", "Double-Flavored Latte", "Large", "Frozen", 10, 3.5, 3.5, "", "", 24, "", "");
+list.add(lFDLatte);
 
-
-
+//Tea Lattes
+//Chai
+let sHChaiLatte = new beverage("Chai Latte", "Tea Latte", "Small", "Hot", "", "", "", 3, "", 12, "", "");
+list.add(sHChaiLatte);
+let mHChaiLatte = new beverage("Chai Latte", "Tea Latte", "Medium", "Hot", "", "", "", 4, "", 16, "", "");
+list.add(mHChaiLatte);
+let lHChaiLatte = new beverage("Chai Latte", "Tea Latte", "Large", "Hot", "", "", "", 5, "", 20, "", "");
+list.add(lHChaiLatte);
+let xLHChaiLatte = new beverage("Chai Latte", "Tea Latte", "Extra Large", "Hot", "", "", "", 6, "", 24, "", "");
+list.add(xLHChaiLatte);
+let sIChaiLatte = new beverage("Chai Latte", "Tea Latte", "Small", "Iced", "", "", "", 3, "", 16, "", 10);
+list.add(sIChaiLatte);
+let mIChaiLatte = new beverage("Chai Latte", "Tea Latte", "Medium", "Iced", "", "", "", 4, "", 20, "", 12);
+list.add(mIChaiLatte);
+let lIChaiLatte = new beverage("Chai Latte", "Tea Latte", "Large", "Iced", "", "", "", 5, "", 24, "", 16);
+list.add(lIChaiLatte);
+let sFChaiLatte = new beverage("Chai Latte", "Tea Latte", "Small", "Frozen", "", "", "", 4, "", 16, "", "");
+list.add(sFChaiLatte);
+let mFChaiLatte = new beverage("Chai Latte", "Tea Latte", "Medium", "Frozen", "", "", "", 5, "", 20, "", "");
+list.add(mFChaiLatte);
+let lFChaiLatte = new beverage("Chai Latte", "Tea Latte", "Large", "Frozen", "", "", "", 6, "", 24, "", "");
+list.add(lFChaiLatte);
+//Matcha
+let sHMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Small", "Hot", "", "", "", 3, "", 12, "", "");
+list.add(sHMatchaLatte);
+let mHMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Medium", "Hot", "", "", "", 4, "", 16, "", "");
+list.add(mHMatchaLatte);
+let lHMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Large", "Hot", "", "", "", 5, "", 20, "", "");
+list.add(lHMatchaLatte);
+let xLHMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Extra Large", "Hot", "", "", "", 6, "", 24, "", "");
+list.add(xLHMatchaLatte);
+let sIMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Small", "Iced", "", "", "", 3, "", 16, "", 10);
+list.add(sIMatchaLatte);
+let mIMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Medium", "Iced", "", "", "", 4, "", 20, "", 12);
+list.add(mIMatchaLatte);
+let lIMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Large", "Iced", "", "", "", 5, "", 24, "", 16);
+list.add(lIMatchaLatte);
+let sFMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Small", "Frozen", "", "", "", 4, "", 16, "", "");
+list.add(sFMatchaLatte);
+let mFMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Medium", "Frozen", "", "", "", 5, "", 20, "", "");
+list.add(mFMatchaLatte);
+let lFMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Large", "Frozen", "", "", "", 6, "", 24, "", "");
+list.add(lFMatchaLatte);
 
 //buttons
 drinkBtn.addEventListener('click', () => {

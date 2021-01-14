@@ -124,6 +124,11 @@ nav {
         width: 26px;
         background-color: #aaaacc;
         border-radius: 5px;
+        font-weight: 550;
+    }
+    .checker::placeholder {
+        color: #333;
+        font-weight: 100;
     }
     .gallery::-webkit-scrollbar {
         width: 0px;
