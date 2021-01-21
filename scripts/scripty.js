@@ -272,11 +272,11 @@ let mISLatte = new beverage("Latte", "Single-Flavored Latte", "Medium", "Iced", 
 list.add(mISLatte);
 let lISLatte = new beverage("Latte", "Single-Flavored Latte", "Large", "Iced", 3, 4, "", "", "", 24, "", 16);
 list.add(lISLatte);
-let sFSLatte = new beverage("Latte", "Single-Flavored Latte", "Small", "Frozen", 6, 4, "", "", "", 16, "", "");
+let sFSLatte = new beverage("Latte", "Single-Flavored Latte", "Small", "Frozen", 6, 3, "", "", "", 16, "", "");
 list.add(sFSLatte);
-let mFSLatte = new beverage("Latte", "Single-Flavored Latte", "Medium", "Frozen", 8, 5, "", "", "", 20, "", "");
+let mFSLatte = new beverage("Latte", "Single-Flavored Latte", "Medium", "Frozen", 8, 4, "", "", "", 20, "", "");
 list.add(mFSLatte);
-let lFSLatte = new beverage("Latte", "Single-Flavored Latte", "Large", "Frozen", 10, 6, "", "", "", 24, "", "");
+let lFSLatte = new beverage("Latte", "Single-Flavored Latte", "Large", "Frozen", 10, 5, "", "", "", 24, "", "");
 list.add(lFSLatte);
 
 //Double-Flavor Lattes
@@ -294,12 +294,78 @@ let mIDLatte = new beverage("Latte", "Double-Flavored Latte", "Medium", "Iced", 
 list.add(mIDLatte);
 let lIDLatte = new beverage("Latte", "Double-Flavored Latte", "Large", "Iced", 3, 3, 3, "", "", 24, "", 16);
 list.add(lIDLatte);
-let sFDLatte = new beverage("Latte", "Double-Flavored Latte", "Small", "Frozen", 6, 4, 2, 2, "", 16, "", "");
+let sFDLatte = new beverage("Latte", "Double-Flavored Latte", "Small", "Frozen", 6, 2, 2, "", "", 16, "", "");
 list.add(sFDLatte);
-let mFDLatte = new beverage("Latte", "Double-Flavored Latte", "Medium", "Frozen", 8, 5, 3, 3, "", 20, "", "");
+let mFDLatte = new beverage("Latte", "Double-Flavored Latte", "Medium", "Frozen", 8, 3, 3, "", "", 20, "", "");
 list.add(mFDLatte);
 let lFDLatte = new beverage("Latte", "Double-Flavored Latte", "Large", "Frozen", 10, 3.5, 3.5, "", "", 24, "", "");
 list.add(lFDLatte);
+
+//Mocha Lattes
+let sHMocha = new beverage("Mocha", "Mocha", "Small", "Hot", 2, "", "", 2, "", 12, "", "");
+list.add(sHMocha);
+let mHMocha = new beverage("Mocha", "Mocha", "Medium", "Hot", 2, "", "", 2.5, "", 16, "", "");
+list.add(mHMocha);
+let lHMocha = new beverage("Mocha", "Mocha", "Large", "Hot", 4, "", "", 3, "", 20, "", "");
+list.add(lHMocha);
+let xLHMocha = new beverage("Mocha", "Mocha", "Extra Large", "Hot", 4, "", "", 3.5, "", 24, "", "");
+list.add(xLHMocha);
+let sIMocha = new beverage("Mocha", "Mocha", "Small", "Iced", 2, "", "", 2, "", 16, "", 10);
+list.add(sIMocha);
+let mIMocha = new beverage("Mocha", "Mocha", "Medium", "Iced", 2, "", "", 2.5, "", 20, "", 12);
+list.add(mIMocha);
+let lIMocha = new beverage("Mocha", "Mocha", "Large", "Iced", 3, "", "", 3, "", 24, "", 16);
+list.add(lIMocha);
+let sFMocha = new beverage("Mocha", "Mocha", "Small", "Frozen", 6, "", "", 2.5, "", 16, "", "");
+list.add(sFMocha);
+let mFMocha = new beverage("Mocha", "Mocha", "Medium", "Frozen", 8, "", "", 3, "", 20, "", "");
+list.add(mFMocha);
+let lFMocha = new beverage("Mocha", "Mocha", "Large", "Frozen", 10, "", "", 3.5, "", 24, "", "");
+list.add(lFMocha);
+
+//Single-Flavored Mochas
+let sHSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Small", "Hot", 2, 1, "", 2,"",12,"","");
+list.add(sHSMocha);
+let mHSLatte = new beverage("Mocha", "Single-Flavored Mocha", "Medium", "Hot", 2, 2, "", 2.5,"",16,"","");
+list.add(mHSMocha);
+let lHSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Large", "Hot", 4, 3, "", 3,"",20,"","");
+list.add(lHSMocha);
+let xLHSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Extra Large", "Hot", 4, 4, "", 3.5,"",24,"","");
+list.add(xLHSMocha);
+let sISMocha = new beverage("Mocha", "Single-Flavored Mocha", "Small", "Iced", 2, 1, "", 2, "", 16, "", 10);
+list.add(sISMocha);
+let mISMocha = new beverage("Mocha", "Single-Flavored Mocha", "Medium", "Iced", 2, 2, "", 2.5, "", 20, "", 12);
+list.add(mISMocha);
+let lISMocha = new beverage("Mocha", "Single-Flavored Mocha", "Large", "Iced", 3, 3, "", 3, "", 24, "", 16);
+list.add(lISMocha);
+let sFSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Small", "Frozen", 6, 2, "", 2.5, "", 16, "", "");
+list.add(sFSMocha);
+let mFSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Medium", "Frozen", 8, 3, "", 3, "", 20, "", "");
+list.add(mFSMocha);
+let lFSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Large", "Frozen", 10, 4, "", 3.5, "", 24, "", "");
+list.add(lFSMocha);
+
+//Double-Flavor Mochas
+let sHDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Small", "Hot", 2, .5, .5, 2,"",12,"","");
+list.add(sHDMocha);
+let mHDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Medium", "Hot", 2, 1, 1, 2.5,"",16,"","");
+list.add(mHDMocha);
+let lHDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Large", "Hot", 4, 1.5, 1.5, 3,"",20,"","");
+list.add(lHDMocha);
+let xLHDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Extra Large", "Hot", 4, 2, 2, 3.5,"",24,"","");
+list.add(xLHDMocha);
+let sIDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Small", "Iced", 2, .5, .5, 2, "", 16, "", 10);
+list.add(sIDMocha);
+let mIDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Medium", "Iced", 2, 1, 1, 2.5, "", 20, "", 12);
+list.add(mIDMocha);
+let lIDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Large", "Iced", 3, 1.5, 1.5, 3, "", 24, "", 16);
+list.add(lIDMocha);
+let sFDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Small", "Frozen", 6, 1, 1, 2.5, "", 16, "", "");
+list.add(sFDMocha);
+let mFDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Medium", "Frozen", 8, 1.5, 1.5, 3, "", 20, "", "");
+list.add(mFDMocha);
+let lFDMocha = new beverage("Mocha", "Double-Flavored Mocha", "Large", "Frozen", 10, 2, 2, 3.5, "", 24, "", "");
+list.add(lFDMocha);
 
 //Tea Lattes
 //Chai
