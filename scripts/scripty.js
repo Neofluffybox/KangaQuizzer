@@ -326,7 +326,7 @@ list.add(lFMocha);
 //Single-Flavored Mochas
 let sHSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Small", "Hot", 2, 1, "", 2,"",12,"","");
 list.add(sHSMocha);
-let mHSLatte = new beverage("Mocha", "Single-Flavored Mocha", "Medium", "Hot", 2, 2, "", 2.5,"",16,"","");
+let mHSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Medium", "Hot", 2, 2, "", 2.5,"",16,"","");
 list.add(mHSMocha);
 let lHSMocha = new beverage("Mocha", "Single-Flavored Mocha", "Large", "Hot", 4, 3, "", 3,"",20,"","");
 list.add(lHSMocha);
