@@ -477,6 +477,27 @@ list.add(mFSnickers);
 let lFSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Large", "Frozen", 10, "Caramel", 2, "Peanut Butter", 2, 3.5, "", 24, "", "");
 list.add(lFSnickers);
 
+let sHSPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Small", "Hot", 2, "Peanut Butter", 1, "", "", 2,"",12,"","");
+list.add(sHSPBMocha);
+let mHSPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Medium", "Hot", 2, "Peanut Butter", 2, "", "", 2.5,"",16,"","");
+list.add(mHSPBMocha);
+let lHSPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Large", "Hot", 4, "Peanut Butter", 3, "", "", 3,"",20,"","");
+list.add(lHSPBMocha);
+let xLHSPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Extra Large", "Hot", 4, "Peanut Butter", 4, "", "", 3.5,"",24,"","");
+list.add(xLHSPBMocha);
+let sISPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Small", "Iced", 2, "Peanut Butter", 1, "", "", 2, "", 16, "", 10);
+list.add(sISPBMocha);
+let mISPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Medium", "Iced", 2, "Peanut Butter", 2, "", "", 2.5, "", 20, "", 12);
+list.add(mISPBMocha);
+let lISPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Large", "Iced", 3, "Peanut Butter", 3, "", "", 3, "", 24, "", 16);
+list.add(lISPBMocha);
+let sFSPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Small", "Frozen", 6, "Peanut Butter", 2, "", "", 2.5, "", 16, "", "");
+list.add(sFSPBMocha);
+let mFSPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Medium", "Frozen", 8, "Peanut Butter", 3, "", "", 3, "", 20, "", "");
+list.add(mFSPBMocha);
+let lFSPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Large", "Frozen", 10, "Peanut Butter", 4, "", "", 3.5, "", 24, "", "");
+list.add(lFSPBMocha);
+
 //buttons
 drinkBtn.addEventListener('click', () => {
   toggleDisplay('#drinkDisplay');
