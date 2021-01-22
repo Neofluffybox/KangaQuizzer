@@ -475,6 +475,32 @@ list.add(mFLemonade);
 let lFLemonade = new beverage("Lemonade", "Lemonade", "Large", "Frozen", "", "", 5, "", "", "", "", 24, 6, 12);
 list.add(lFLemonade);
 
+//redbulls
+let sHRedbull = new beverage("Redbull", "Single-Flavor Redbull", "Small", "Hot", "", "", 3, "", "", "", 1, 12, "", "");
+list.add(sHRedbull);
+let lHRedbull = new beverage("Redbull", "Single-Flavor Redbull", "Large", "Hot", "", "", 6, "", "", "", 2, 24, "", "");
+list.add(lHRedbull);
+let sIRedbull = new beverage("Redbull", "Single-Flavor Redbull", "Small", "Iced", "", "", 4, "","", "", 1, 16, "", "");
+list.add(sIRedbull);
+let lIRedbull = new beverage("Redbull", "Single-Flavor Redbull", "Large", "Iced", "", "", 8,"","", "", 2, 24, "", "");
+list.add(lIRedbull);
+let sFRedbull = new beverage("Redbull", "Single-Flavor Redbull", "Small", "Frozen", "", "", 6,"","", "", .75, 20, "", "");
+list.add(sFRedbull);
+let lFRedbull = new beverage("Redbull", "Single-Flavor Redbull", "Large", "Frozen", "", "", 8,"","", "", 1, 24, "", "");
+list.add(lFRedbull);
+let sHDRedbull = new beverage("Redbull", "Double-Flavor Redbull", "Small", "Hot", "", "", 1.5, "", 1.5, "", 1, 12, "", "");
+list.add(sHDRedbull);
+let lHDRedbull = new beverage("Redbull", "Double-Flavor Redbull", "Large", "Hot", "", "", 3, "", 3, "", 2, 24, "", "");
+list.add(lHDRedbull);
+let sIDRedbull = new beverage("Redbull", "Double-Flavor Redbull", "Small", "Iced", "", "", 2, "",2, "", 1, 16, "", "");
+list.add(sIDRedbull);
+let lIDRedbull = new beverage("Redbull", "Double-Flavor Redbull", "Large", "Iced", "", "", 4,"",4, "", 2, 24, "", "");
+list.add(lIDRedbull);
+let sFDRedbull = new beverage("Redbull", "Double-Flavor Redbull", "Small", "Frozen", "", "", 3,"",3, "", .75, 20, "", "");
+list.add(sFDRedbull);
+let lFDRedbull = new beverage("Redbull", "Double-Flavor Redbull", "Large", "Frozen", "", "", 4,"",4, "", 1, 24, "", "");
+list.add(lFDRedbull);
+
 //named drinks
 let sHSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Small", "Hot", 2, "Caramel", .5, "Peanut Butter", .5, 2, "", 12, "", "");
 list.add(sHSnickers);
