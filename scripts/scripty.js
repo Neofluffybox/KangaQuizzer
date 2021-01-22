@@ -455,6 +455,26 @@ list.add(mFMatchaLatte);
 let lFMatchaLatte = new beverage("Matcha Latte", "Tea Latte", "Large", "Frozen", "", "", "", "", "", 6, "", 24, "", "");
 list.add(lFMatchaLatte);
 
+//Iced Teas and Lemondes
+let sIBlackTea = new beverage("Tea", "Tea", "Small", "Iced", "", "", 2, "", "", "", "", 16, 2, 10);
+list.add(sIBlackTea);
+let mIBlackTea = new beverage("Tea", "Tea", "Medium", "Iced", "", "", 3, "", "", "", "", 20, 3, 12);
+list.add(mIBlackTea);
+let lIBlackTea = new beverage("Tea", "Tea", "Large", "Iced", "", "", 4, "", "", "", "", 24, 4, 16);
+list.add(lIBlackTea);
+let sILemonade = new beverage("Lemonade", "Lemonade", "Small", "Iced", "", "", 2, "", "", "", "", 16, 2, 10);
+list.add(sILemonade);
+let mILemonade = new beverage("Lemonade", "Lemonade", "Medium", "Iced", "", "", 3, "", "", "", "", 20, 3, 12);
+list.add(mILemonade);
+let lILemonade = new beverage("Lemonade", "Lemonade", "Large", "Iced", "", "", 4, "", "", "", "", 24, 4, 16);
+list.add(lILemonade);
+let sFLemonade = new beverage("Lemonade", "Lemonade", "Small", "Frozen", "", "", 3, "", "", "", "", 16, 4, 8);
+list.add(sFLemonade);
+let mFLemonade = new beverage("Lemonade", "Lemonade", "Medium", "Frozen", "", "", 4, "", "", "", "", 20, 5, 10);
+list.add(mFLemonade);
+let lFLemonade = new beverage("Lemonade", "Lemonade", "Large", "Frozen", "", "", 5, "", "", "", "", 24, 6, 12);
+list.add(lFLemonade);
+
 //named drinks
 let sHSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Small", "Hot", 2, "Caramel", .5, "Peanut Butter", .5, 2, "", 12, "", "");
 list.add(sHSnickers);
