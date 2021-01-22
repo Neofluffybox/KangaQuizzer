@@ -179,10 +179,22 @@ nav {
     #pumpsNum {
         display: none;
     }
+    #flavor1 {
+        display: none;
+    }
+    #flavor1Num {
+        display: none;
+    }
     #pumps2 {
         display: none;
     }
     #pumps2Num {
+        display: none;
+    }
+    #flavor2 {
+        display: none;
+    }
+    #flavor2Num {
         display: none;
     }
     #scoops {
