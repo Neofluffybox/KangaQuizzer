@@ -151,24 +151,28 @@ class drinkList {
     } else {
       shotsCheckerBox.style.backgroundColor = '#ee3333';
     };
-    if (flavor1CheckerBox.value != flavor2CheckerBox.value) {
-      if (flavor1CheckerBox.value == flavor1Num.innerHTML || flavor2Num.innerHTML) {
+    if (flavor1CheckerBox.value.toLowerCase() != flavor2CheckerBox.value.toLowerCase()) {
+      if (flavor1CheckerBox.value.toLowerCase() == flavor1Num.innerHTML.toLowerCase() || flavor2Num.innerHTML.toLowerCase()) {
         flavor1CheckerBox.style.backgroundColor = '#33ee33';
       } else {
         flavor1CheckerBox.style.backgroundColor = '#ee3333';
       };
+    } else {
+      flavor1CheckerBox.style.backgroundColor = '#ee3333';
     };
     if (pumpsCheckerBox.value == pumpsNum.innerHTML) {
       pumpsCheckerBox.style.backgroundColor = '#33ee33';
     } else {
       pumpsCheckerBox.style.backgroundColor = '#ee3333';
     };
-    if (flavor2CheckerBox.value != flavor1CheckerBox.value) {
-      if (flavor2CheckerBox.value == flavor2Num.innerHTML) {
+    if (flavor2CheckerBox.value.toLowerCase() != flavor1CheckerBox.value.toLowerCase()) {
+      if (flavor2CheckerBox.value.toLowerCase() == flavor2Num.innerHTML.toLowerCase() || flavor1Num.innerHTML.toLowerCase()) {
         flavor2CheckerBox.style.backgroundColor = '#33ee33';
       } else {
         flavor2CheckerBox.style.backgroundColor = '#ee3333';
       };
+    } else {
+      flavor2CheckerBox.style.backgroundColor = '#ee3333';
     };
     if (pumps2CheckerBox.value == pumps2Num.innerHTML) {
       pumps2CheckerBox.style.backgroundColor = '#33ee33';
