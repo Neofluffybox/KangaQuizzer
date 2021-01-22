@@ -450,6 +450,24 @@ list.add(lFMatchaLatte);
 //named drinks
 let sHSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Small", "Hot", 2, "Caramel", .5, "Peanut Butter", .5, 2, "", 12, "", "");
 list.add(sHSnickers);
+let mHSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Medium", "Hot", 2, "Caramel", 1, "Peanut Butter", 1, 2.5, "", 16, "", "");
+list.add(mHSnickers);
+let lHSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Large", "Hot", 4, "Caramel", 1.5, "Peanut Butter", 1.5, 3, "", 20, "", "");
+list.add(lHSnickers);
+let xLHSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Extra Large", "Hot", 4, "Caramel", 2, "Peanut Butter", 2, 3.5, "", 24, "", "");
+list.add(xLHSnickers);
+let sISnickers = new beverage("Snickers", "Double-Flavor Mocha", "Small", "Iced", 2, "Caramel", .5, "Peanut Butter", .5, 2, "", 16, "", 10);
+list.add(sISnickers);
+let mISnickers = new beverage("Snickers", "Double-Flavor Mocha", "Medium", "Iced", 2, "Caramel", 1, "Peanut Butter", 1, 2.5, "", 20, "", 12);
+list.add(mISnickers);
+let lISnickers = new beverage("Snickers", "Double-Flavor Mocha", "Large", "Iced", 3, "Caramel", 1.5, "Peanut Butter", 1.5, 3, "", 24, "", 16);
+list.add(lISnickers);
+let sFSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Small", "Frozen", 6, "Caramel", 1, "Peanut Butter", 1, 2.5, "", 16, "", "");
+list.add(sFSnickers);
+let mFSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Medium", "Frozen", 8, "Caramel", 1.5, "Peanut Butter", 1.5, 3, "", 20, "", "");
+list.add(mFSnickers);
+let lFSnickers = new beverage("Snickers", "Double-Flavor Mocha", "Large", "Frozen", 10, "Caramel", 2, "Peanut Butter", 2, 3.5, "", 24, "", "");
+list.add(lFSnickers);
 
 //buttons
 drinkBtn.addEventListener('click', () => {
