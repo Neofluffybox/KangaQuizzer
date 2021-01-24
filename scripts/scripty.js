@@ -586,6 +586,27 @@ list.add(mFAJ);
 let lFAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Large", "Frozen", 10, "Almond", 2, "Coconut", 2, 3.5, "", 24, "", "");
 list.add(lFAJ);
 
+let sHBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Small", "Hot", 2, "Butterscotch", .5, "Peanut Butter", .5, 2, "", 12, "", "");
+list.add(sHBF);
+let mHBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Medium", "Hot", 2, "Butterscotch", 1, "Peanut Butter", 1, 2.5, "", 16, "", "");
+list.add(mHBF);
+let lHBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Large", "Hot", 4, "Butterscotch", 1.5, "Peanut Butter", 1.5, 3, "", 20, "", "");
+list.add(lHBF);
+let xLHBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Extra Large", "Hot", 4, "Butterscotch", 2, "Peanut Butter", 2, 3.5, "", 24, "", "");
+list.add(xLHBF);
+let sIBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Small", "Iced", 2, "Butterscotch", .5, "Peanut Butter", .5, 2, "", 16, "", 10);
+list.add(sIBF);
+let mIBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Medium", "Iced", 2, "Butterscotch", 1, "Peanut Butter", 1, 2.5, "", 20, "", 12);
+list.add(mIBF);
+let lIBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Large", "Iced", 3, "Butterscotch", 1.5, "Peanut Butter", 1.5, 3, "", 24, "", 16);
+list.add(lIBF);
+let sFBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Small", "Frozen", 6, "Butterscotch", 1, "Peanut Butter", 1, 2.5, "", 16, "", "");
+list.add(sFBF);
+let mFBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Medium", "Frozen", 8, "Butterscotch", 1.5, "Peanut Butter", 1.5, 3, "", 20, "", "");
+list.add(mFBF);
+let lFBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Large", "Frozen", 10, "Butterscotch", 2, "Peanut Butter", 2, 3.5, "", 24, "", "");
+list.add(lFBF);
+
 //buttons
 drinkBtn.addEventListener('click', () => {
   toggleDisplay('#drinkDisplay');
