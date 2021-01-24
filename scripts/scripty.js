@@ -544,6 +544,27 @@ list.add(mFSPBMocha);
 let lFSPBMocha = new beverage("P.B. Mocha", "Single-Flavored Mocha", "Large", "Frozen", 10, "Peanut Butter", 4, "", "", 3.5, "", 24, "", "");
 list.add(lFSPBMocha);
 
+let sHSamoa = new beverage("Samoa", "Double-Flavor Mocha", "Small", "Hot", 2, "Caramel", .5, "Coconut", .5, 2, "", 12, "", "");
+list.add(sHSamoa);
+let mHSamoa = new beverage("Samoa", "Double-Flavor Mocha", "Medium", "Hot", 2, "Caramel", 1, "Coconut", 1, 2.5, "", 16, "", "");
+list.add(mHSamoa);
+let lHSamoa = new beverage("Samoa", "Double-Flavor Mocha", "Large", "Hot", 4, "Caramel", 1.5, "Coconut", 1.5, 3, "", 20, "", "");
+list.add(lHSamoa);
+let xLHSamoa = new beverage("Samoa", "Double-Flavor Mocha", "Extra Large", "Hot", 4, "Caramel", 2, "Coconut", 2, 3.5, "", 24, "", "");
+list.add(xLHSamoa);
+let sISamoa = new beverage("Samoa", "Double-Flavor Mocha", "Small", "Iced", 2, "Caramel", .5, "Coconut", .5, 2, "", 16, "", 10);
+list.add(sISamoa);
+let mISamoa = new beverage("Samoa", "Double-Flavor Mocha", "Medium", "Iced", 2, "Caramel", 1, "Coconut", 1, 2.5, "", 20, "", 12);
+list.add(mISamoa);
+let lISamoa = new beverage("Samoa", "Double-Flavor Mocha", "Large", "Iced", 3, "Caramel", 1.5, "Coconut", 1.5, 3, "", 24, "", 16);
+list.add(lISamoa);
+let sFSamoa = new beverage("Samoa", "Double-Flavor Mocha", "Small", "Frozen", 6, "Caramel", 1, "Coconut", 1, 2.5, "", 16, "", "");
+list.add(sFSamoa);
+let mFSamoa = new beverage("Samoa", "Double-Flavor Mocha", "Medium", "Frozen", 8, "Caramel", 1.5, "Coconut", 1.5, 3, "", 20, "", "");
+list.add(mFSamoa);
+let lFSamoa = new beverage("Samoa", "Double-Flavor Mocha", "Large", "Frozen", 10, "Caramel", 2, "Coconut", 2, 3.5, "", 24, "", "");
+list.add(lFSamoa);
+
 //buttons
 drinkBtn.addEventListener('click', () => {
   toggleDisplay('#drinkDisplay');
