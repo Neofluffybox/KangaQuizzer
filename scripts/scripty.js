@@ -565,6 +565,27 @@ list.add(mFSamoa);
 let lFSamoa = new beverage("Samoa", "Double-Flavor Mocha", "Large", "Frozen", 10, "Caramel", 2, "Coconut", 2, 3.5, "", 24, "", "");
 list.add(lFSamoa);
 
+let sHAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Small", "Hot", 2, "Almond", .5, "Coconut", .5, 2, "", 12, "", "");
+list.add(sHAJ);
+let mHAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Medium", "Hot", 2, "Almond", 1, "Coconut", 1, 2.5, "", 16, "", "");
+list.add(mHAJ);
+let lHAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Large", "Hot", 4, "Almond", 1.5, "Coconut", 1.5, 3, "", 20, "", "");
+list.add(lHAJ);
+let xLHAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Extra Large", "Hot", 4, "Almond", 2, "Coconut", 2, 3.5, "", 24, "", "");
+list.add(xLHAJ);
+let sIAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Small", "Iced", 2, "Almond", .5, "Coconut", .5, 2, "", 16, "", 10);
+list.add(sIAJ);
+let mIAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Medium", "Iced", 2, "Almond", 1, "Coconut", 1, 2.5, "", 20, "", 12);
+list.add(mIAJ);
+let lIAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Large", "Iced", 3, "Almond", 1.5, "Coconut", 1.5, 3, "", 24, "", 16);
+list.add(lIAJ);
+let sFAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Small", "Frozen", 6, "Almond", 1, "Coconut", 1, 2.5, "", 16, "", "");
+list.add(sFAJ);
+let mFAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Medium", "Frozen", 8, "Almond", 1.5, "Coconut", 1.5, 3, "", 20, "", "");
+list.add(mFAJ);
+let lFAJ = new beverage("Almond Joy", "Double-Flavor Mocha", "Large", "Frozen", 10, "Almond", 2, "Coconut", 2, 3.5, "", 24, "", "");
+list.add(lFAJ);
+
 //buttons
 drinkBtn.addEventListener('click', () => {
   toggleDisplay('#drinkDisplay');
