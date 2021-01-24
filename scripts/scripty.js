@@ -38,6 +38,8 @@ const cOzCheckerBox = document.querySelector('#cOzCheckerBox');
 const wOz = document.querySelector('#wOz');
 const wOzNum = document.querySelector('#wOzNum');
 const wOzCheckerBox = document.querySelector('#wOzCheckerBox');
+const newBasicDrinkBtn = document.querySelector('#newBasicDrink');
+const newSpecialtyDrinkBtn = document.querySelector('#newSpecialtyDrink');
 const newDrinkBtn = document.querySelector('#newDrink');
 const checkerBtn = document.querySelector('#checkerBtn');
 const answerBtn = document.querySelector('#answer');
@@ -115,36 +117,100 @@ class drinkList {
         wOzNum.innerHTML = theDrink._wOz;
         toggleDisplay('#wOz');
       };
-    } /*else {
-      let theDrink = this.list._name[name];
+    } else if (name == "basic") {
+      let newDL = this.list.filter(drink => drink._type == "Latte" || drink._type == "Mocha" || drink._type == "Tea Latte" || drink._type == "Tea" || drink._type == "Redbull");
+      let randomDrink = Math.floor(Math.random() * newDL.length);
+      let theDrink = newDL[randomDrink];
       drinkTitle.innerHTML = `${theDrink._size} ${theDrink._temp} ${theDrink._name}`;
       drinkType.innerHTML = theDrink._type;
       if (theDrink._shots != '') {
         shotsNum.innerHTML = theDrink._shots;
+        toggleDisplay('#shots');
+      };
+      if (theDrink._flav1 != '') {
+        flavor1Num.innerHTML = theDrink._flav1;
+        toggleDisplay('#flavor1');
       };
       if (theDrink._pumps != '') {
         pumpsNum.innerHTML = theDrink._pumps;
+        toggleDisplay('#pumps');
+      };
+      if (theDrink._flav2 != '') {
+        flavor2Num.innerHTML = theDrink._flav2;
+        toggleDisplay('#flavor2');
       };
       if (theDrink._pumps2 != '') {
         pumps2Num.innerHTML = theDrink._pumps2;
+        toggleDisplay('#pumps2');
       };
       if (theDrink._scoops != '') {
         scoopsNum.innerHTML = theDrink._scoops;
+        toggleDisplay('#scoops');
       };
       if (theDrink._redbulls != '') {
         redbullsNum.innerHTML = theDrink._redbulls;
+        toggleDisplay('#redbulls');
       };
       if (theDrink._cupSize != '') {
         cupSizeNum.innerHTML = theDrink._cupSize;
+        toggleDisplay('#cupSize');
       };
       if (theDrink._cOz != '') {
-        cOz.innerHTML = theDrink._cOz;
+        cOzNum.innerHTML = theDrink._cOz;
+        toggleDisplay('#cOz');
       };
       if (theDrink._wOz != '') {
-        wOz.innerHTML = theDrink._wOz;
+        wOzNum.innerHTML = theDrink._wOz;
+        toggleDisplay('#wOz');
       };
-    }*/
-  }
+    } else if (name == "specialty") {
+        let newDL = this.list.filter(drink => drink._type == "Latte" || drink._type == "Mocha" || drink._type == "Tea Latte" || drink._type == "Single-Flavor Latte" || drink._type == "Single-Flavor Mocha" || drink._type == "Redbull" || drink._type == "Single-Flavored Redbull");
+        let randomDrink = Math.floor(Math.random() * newDL.length);
+        let theDrink = newDL[randomDrink];
+        drinkTitle.innerHTML = `${theDrink._size} ${theDrink._temp} ${theDrink._name}`;
+        drinkType.innerHTML = theDrink._type;
+        if (theDrink._shots != '') {
+          shotsNum.innerHTML = theDrink._shots;
+          toggleDisplay('#shots');
+        };
+        if (theDrink._flav1 != '') {
+          flavor1Num.innerHTML = theDrink._flav1;
+          toggleDisplay('#flavor1');
+        };
+        if (theDrink._pumps != '') {
+          pumpsNum.innerHTML = theDrink._pumps;
+          toggleDisplay('#pumps');
+        };
+        if (theDrink._flav2 != '') {
+          flavor2Num.innerHTML = theDrink._flav2;
+          toggleDisplay('#flavor2');
+        };
+        if (theDrink._pumps2 != '') {
+          pumps2Num.innerHTML = theDrink._pumps2;
+          toggleDisplay('#pumps2');
+        };
+        if (theDrink._scoops != '') {
+          scoopsNum.innerHTML = theDrink._scoops;
+          toggleDisplay('#scoops');
+        };
+        if (theDrink._redbulls != '') {
+          redbullsNum.innerHTML = theDrink._redbulls;
+          toggleDisplay('#redbulls');
+        };
+        if (theDrink._cupSize != '') {
+          cupSizeNum.innerHTML = theDrink._cupSize;
+          toggleDisplay('#cupSize');
+        };
+        if (theDrink._cOz != '') {
+          cOzNum.innerHTML = theDrink._cOz;
+          toggleDisplay('#cOz');
+        };
+        if (theDrink._wOz != '') {
+          wOzNum.innerHTML = theDrink._wOz;
+          toggleDisplay('#wOz');
+        };
+    }
+  };
   checker() {
     if (shotsCheckerBox.value == shotsNum.innerHTML) {
       shotsCheckerBox.style.backgroundColor = '#33ee33';
@@ -615,6 +681,16 @@ drinkBtn.addEventListener('click', () => {
 });
 drinkBtn.addEventListener('dblclick', () => {
   toggleDisplay('#drink');
+});
+
+newBasicDrinkBtn.addEventListener('click', () => {
+  resetContent();
+  list.display("basic");
+});
+
+newSpecialtyDrinkBtn.addEventListener('click', () => {
+  resetContent();
+  list.display("specialty");
 });
 
 newDrinkBtn.addEventListener('click', () => {
