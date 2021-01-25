@@ -673,11 +673,11 @@ list.add(mFBF);
 let lFBF = new beverage("Butter Finger", "Double-Flavor Mocha", "Large", "Frozen", 10, "Butterscotch", 2, "Peanut Butter", 2, 3.5, "", 24, "", "");
 list.add(lFBF);
 
-let hAvalanch= new beverage("Avalanch", "Double-Flavored Latte", "", "Hot", 6, "Caramel", 3, "White Mocha", 3, "","",24,"","");
+let hAvalanch= new beverage("Avalanch", "Double-Flavored Breve", "", "Hot", 6, "Caramel", 3, "White Mocha", 3, "","",24,"","");
 list.add(hAvalanch);
-let iAvalanch = new beverage("Avalanch", "Double-Flavored Latte", "", "Iced", 14, "Caramel", 3, "White Mocha", 3, "", "", 24, "", 16);
+let iAvalanch = new beverage("Avalanch", "Double-Flavored Breve", "", "Iced", 14, "Caramel", 3, "White Mocha", 3, "", "", 24, "", 16);
 list.add(iAvalanch);
-let fAvalanch = new beverage("Avalanch", "Double-Flavored Latte", "", "Frozen", 14, "Caramel", 3, "White Mocha", 3, "","",24,"","");
+let fAvalanch = new beverage("Avalanch", "Double-Flavored Breve", "", "Frozen", 14, "Caramel", 3, "White Mocha", 3, "","",24,"","");
 list.add(fAvalanch);
 
 
