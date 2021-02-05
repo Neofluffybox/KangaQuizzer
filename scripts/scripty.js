@@ -43,6 +43,19 @@ const newSpecialtyDrinkBtn = document.querySelector('#newSpecialtyDrink');
 const newDrinkBtn = document.querySelector('#newDrink');
 const checkerBtn = document.querySelector('#checkerBtn');
 const answerBtn = document.querySelector('#answer');
+const refBtn = document.querySelector('#ref');
+const findHotEspressoBtn = document.querySelector('#findHotEspresso');
+const findIcedEspressoBtn = document.querySelector('#findIcedEspresso');
+const findFrozenEspressoBtn = document.querySelector('#findFrozenEspresso');
+const findTeaDrinksBtn = document.querySelector('#findTeaDrinks');
+const findOtherDrinksBtn = document.querySelector('#findOtherDrinks');
+const findSmoothiesBtn = document.querySelector('#findSmoothies');
+const findRoofreshersBtn = document.querySelector('#findRoofreshers');
+const findRedbullsBtn = document.querySelector('#findRedbulls');
+const contactsBtn = document.querySelector('#contacts');
+const contactsViewer = document.querySelector('#contactsViewer');
+const pdf = document.querySelector('#pdf');
+const pdfViewer = document.querySelector('#pdfViewer');
 
 //classes and functions
 class beverage {
@@ -340,6 +353,21 @@ function resetContent() {
   wOzCheckerBox.style.backgroundColor = '#aaaacc';
   wOzCheckerBox.placeholder = '';
   wOz.style.display = 'none';
+}
+
+function whereTo(page) {
+  let file = document.createElement('embed');
+  file.id = 'pdf';
+  file.src = `images/Adobe Scan Jan 31, 2021.pdf#page=${page}`;
+  return pdfViewer.appendChild(file);
+}
+function clearPDF(name) {
+  return name.innerHTML = '';
+}
+function contactsPage() {
+  let file1 = document.createElement('embed');
+  file1.src = 'images/Adobe Scan Feb 5, 2021.pdf';
+  return contactsViewer.appendChild(file1);
 }
 
 //menu
@@ -683,12 +711,67 @@ list.add(fAvalanch);
 
 //buttons
 drinkBtn.addEventListener('click', () => {
+  resetDisplay('#pdfOptions');
+  resetDisplay('#pdfViewer');
+  resetDispaly('#contactsViewer')
   toggleDisplay('#drinkDisplay');
   resetContent();
   list.display("random");
 });
-drinkBtn.addEventListener('dblclick', () => {
-  toggleDisplay('#drink');
+
+refBtn.addEventListener('click', () => {
+  toggleDisplay('#pdfOptions');
+  clearPDF(contactsViewer);
+});
+
+findHotEspressoBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(3);
+  toggleDisplay('#pdfViewer');
+});
+findIcedEspressoBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(6);
+  toggleDisplay('#pdfViewer');
+});
+findFrozenEspressoBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(9);
+  toggleDisplay('#pdfViewer');
+});
+findTeaDrinksBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(12);
+  toggleDisplay('#pdfViewer');
+});
+findOtherDrinksBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(14);
+  toggleDisplay('#pdfViewer');
+});
+findSmoothiesBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(15);
+  toggleDisplay('#pdfViewer');
+});
+findRoofreshersBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(16);
+  toggleDisplay('#pdfViewer');
+});
+findRedbullsBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(18);
+  toggleDisplay('#pdfViewer');
+});
+
+contactsBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  clearPDF(contactsViewer);
+  resetDisplay('#pdfViewer');
+  resetDisplay('#pdfOptions');
+  contactsPage();
+  toggleDisplay('#contactsViewer');
 });
 
 newBasicDrinkBtn.addEventListener('click', () => {
