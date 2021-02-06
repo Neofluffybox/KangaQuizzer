@@ -44,6 +44,7 @@ const newDrinkBtn = document.querySelector('#newDrink');
 const checkerBtn = document.querySelector('#checkerBtn');
 const answerBtn = document.querySelector('#answer');
 const refBtn = document.querySelector('#ref');
+const findOurCoffeeBtn = document.querySelector('#findOurCoffee');
 const findHotEspressoBtn = document.querySelector('#findHotEspresso');
 const findIcedEspressoBtn = document.querySelector('#findIcedEspresso');
 const findFrozenEspressoBtn = document.querySelector('#findFrozenEspresso');
@@ -356,11 +357,73 @@ function resetContent() {
 }
 
 function whereTo(page) {
-  let file = document.createElement('embed');
+  let file = document.createElement('img');
+  let file2 = document.createElement('img');
+  let file3 = document.createElement('img');
+  file3.id = 'pdf';
+  file2.id = 'pdf';
   file.id = 'pdf';
-  file.src = `images/Adobe Scan Jan 31, 2021.pdf#page=${page}`;
+  switch (page) {
+    case 0:
+      file.src = 'images/IMG_0809.jpg';
+      pdfViewer.appendChild(file);
+      break;
+    case 1:
+      file.src = 'images/IMG_0790.jpg';
+      file2.src = 'images/IMG_0791.jpg';
+      file3.src = 'images/IMG_0792.jpg';
+      pdfViewer.appendChild(file);
+      pdfViewer.appendChild(file2);
+      pdfViewer.appendChild(file3);
+      break;
+    case 2:
+      file.src = 'images/IMG_0793.jpg';
+      file2.src = 'images/IMG_0795.jpg';
+      file3.src = 'images/IMG_0796';
+      pdfViewer.appendChild(file);
+      pdfViewer.appendChild(file2);
+      pdfViewer.appendChild(file3);
+      break;
+    case 3:
+      file.src = 'images/IMG_0797.jpg';
+      file2.src = 'images/IMG_0798.jpg';
+      file3.src = 'images/IMG_0799.jpg';
+      pdfViewer.appendChild(file);
+      pdfViewer.appendChild(file2);
+      pdfViewer.appendChild(file3);
+      break;
+    case 4:
+      file.src = 'images/IMG_0800.jpg';
+      file2.src = 'images/IMG_0801.jpg';
+      pdfViewer.appendChild(file);
+      pdfViewer.appendChild(file2);
+      break;
+    case 5:
+      file.src = 'images/IMG_0802.jpg';
+      pdfViewer.appendChild(file);
+      break;
+    case 6:
+      file.src = 'images/IMG_0803.jpg';
+      pdfViewer.appendChild(file);
+      break;
+    case 7:
+      file.src = 'images/IMG_0804.jpg';
+      file2.src = 'images/IMG_0805.jpg';
+      pdfViewer.appendChild(file);
+      pdfViewer.appendChild(file2);
+      break;
+    case 8:
+      file.src = 'images/IMG_0806.jpg';
+      file2.src = 'images/IMG_0807.jpg';
+      file3.src = 'images/IMG_0808.jpg';
+      pdfViewer.appendChild(file);
+      pdfViewer.appendChild(file2);
+      pdfViewer.appendChild(file3);
+      break;
+  }
   file.style.borderRadius = '10px';
-  return pdfViewer.appendChild(file);
+  file2.style.borderRadius = '10px';
+  file3.style.borderRadius = '10px';
 }
 function clearPDF(name) {
   return name.innerHTML = '';
@@ -729,44 +792,49 @@ refBtn.addEventListener('click', () => {
   clearPDF(contactsViewer);
 });
 
+findOurCoffeeBtn.addEventListener('click', () => {
+  clearPDF(pdfViewer);
+  whereTo(0);
+  toggleDisplay('#pdfViewer');
+});
 findHotEspressoBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
-  whereTo(3);
+  whereTo(1);
   toggleDisplay('#pdfViewer');
 });
 findIcedEspressoBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
-  whereTo(6);
+  whereTo(2);
   toggleDisplay('#pdfViewer');
 });
 findFrozenEspressoBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
-  whereTo(9);
+  whereTo(3);
   toggleDisplay('#pdfViewer');
 });
 findTeaDrinksBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
-  whereTo(12);
+  whereTo(4);
   toggleDisplay('#pdfViewer');
 });
 findOtherDrinksBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
-  whereTo(14);
+  whereTo(5);
   toggleDisplay('#pdfViewer');
 });
 findSmoothiesBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
-  whereTo(15);
+  whereTo(6);
   toggleDisplay('#pdfViewer');
 });
 findRoofreshersBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
-  whereTo(16);
+  whereTo(7);
   toggleDisplay('#pdfViewer');
 });
 findRedbullsBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
-  whereTo(18);
+  whereTo(8);
   toggleDisplay('#pdfViewer');
 });
 
