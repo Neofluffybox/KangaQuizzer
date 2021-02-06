@@ -359,6 +359,7 @@ function whereTo(page) {
   let file = document.createElement('embed');
   file.id = 'pdf';
   file.src = `images/Adobe Scan Jan 31, 2021.pdf#page=${page}`;
+  file.style.borderRadius = '10px';
   return pdfViewer.appendChild(file);
 }
 function clearPDF(name) {
@@ -367,6 +368,7 @@ function clearPDF(name) {
 function contactsPage() {
   let file1 = document.createElement('embed');
   file1.src = 'images/Adobe Scan Feb 5, 2021.pdf';
+  file1.style.borderRadius = '10px';
   return contactsViewer.appendChild(file1);
 }
 
@@ -713,13 +715,16 @@ list.add(fAvalanch);
 drinkBtn.addEventListener('click', () => {
   resetDisplay('#pdfOptions');
   resetDisplay('#pdfViewer');
-  resetDispaly('#contactsViewer')
+  resetDisplay('#contactsViewer');
   toggleDisplay('#drinkDisplay');
   resetContent();
   list.display("random");
 });
 
 refBtn.addEventListener('click', () => {
+  resetDisplay('#pdfViewer');
+  resetDisplay('#drinkDisplay');
+  resetDisplay('#contactsViewer');
   toggleDisplay('#pdfOptions');
   clearPDF(contactsViewer);
 });
@@ -768,6 +773,7 @@ findRedbullsBtn.addEventListener('click', () => {
 contactsBtn.addEventListener('click', () => {
   clearPDF(pdfViewer);
   clearPDF(contactsViewer);
+  resetDisplay('#drinkDisplay');
   resetDisplay('#pdfViewer');
   resetDisplay('#pdfOptions');
   contactsPage();
