@@ -429,10 +429,18 @@ function clearPDF(name) {
   return name.innerHTML = '';
 }
 function contactsPage() {
-  let file1 = document.createElement('embed');
-  file1.src = 'images/Adobe Scan Feb 5, 2021.pdf';
+  let file1 = document.createElement('img');
+  let file2 = document.createElement('img');
+  let file3 = document.createElement('img');
+  file1.src = 'images/IMG_0811.PNG';
+  file2.src = 'images/IMG_0812.PNG';
+  file3.src = 'images/IMG_0813.PNG';
   file1.style.borderRadius = '10px';
-  return contactsViewer.appendChild(file1);
+  file2.style.borderRadius = '10px';
+  file3.style.borderRadius = '10px';
+  contactsViewer.appendChild(file1);
+  contactsViewer.appendChild(file2);
+  contactsViewer.appendChild(file3);
 }
 
 //menu
