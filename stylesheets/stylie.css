@@ -104,6 +104,9 @@ header {
     text-align: center;
     justify-content: center;
 }
+    #menuOps {
+        display: none;
+    }
     .title {
         font-size: 18px;
         margin: 3px;
@@ -188,6 +191,7 @@ header {
         padding: 12px;
         border: 3px solid #000;
         border-radius: 10px;
+        background-color: #fcce05;
     }
     #drinkType {
         display: flex;
@@ -196,6 +200,7 @@ header {
         padding: 10px;
         border: 3px solid #000;
         border-radius: 10px;
+        background-color: #fcce05;
     }
     #drink, #ref, #contacts {
         margin-left: 10px;

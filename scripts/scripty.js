@@ -6,6 +6,7 @@ create view and quiz on drinks for my job
 
 //selectors
 const drinkBtn = document.querySelector('#drink');
+const drinkOps = document.querySelector('#menuOps');
 const drinkTitle = document.querySelector('#drinkTitle');
 const drinkType = document.querySelector('#drinkType');
 const shots = document.querySelector('#shots');
@@ -787,9 +788,9 @@ drinkBtn.addEventListener('click', () => {
   resetDisplay('#pdfOptions');
   resetDisplay('#pdfViewer');
   resetDisplay('#contactsViewer');
+  toggleDisplay('#menuOps');
   toggleDisplay('#drinkDisplay');
   resetContent();
-  list.display("random");
 });
 
 refBtn.addEventListener('click', () => {
@@ -797,6 +798,7 @@ refBtn.addEventListener('click', () => {
   resetDisplay('#drinkDisplay');
   resetDisplay('#contactsViewer');
   toggleDisplay('#pdfOptions');
+  resetDisplay('#menuOps');
   clearPDF(contactsViewer);
 });
 
@@ -852,6 +854,7 @@ contactsBtn.addEventListener('click', () => {
   resetDisplay('#drinkDisplay');
   resetDisplay('#pdfViewer');
   resetDisplay('#pdfOptions');
+  resetDisplay('#menuOps');
   contactsPage();
   toggleDisplay('#contactsViewer');
 });
